@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	
+		.st1{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:3;}
+	.st2{fill:none;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;}
+</style>
+<line class="st0" x1="6" y1="17" x2="6" y2="23"/>
+<line class="st0" x1="26" y1="23" x2="26" y2="17"/>
+<polygon class="st0" points="29,27 3,27 5,23 27,23 "/>
+<polygon class="st0" points="28,11 4,11 7,4 25,4 "/>
+<path class="st0" d="M16,17L16,17c-2.2,0-4-1.8-4-4v-2h8v2C20,15.2,18.2,17,16,17z"/>
+<path class="st0" d="M8,17L8,17c-2.2,0-4-1.8-4-4v-2h8v2C12,15.2,10.2,17,8,17z"/>
+<path class="st0" d="M24,17L24,17c-2.2,0-4-1.8-4-4v-2h8v2C28,15.2,26.2,17,24,17z"/>
+<rect x="-360" y="-504" class="st3" width="536" height="680"/>
+</svg>

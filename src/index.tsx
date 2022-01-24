@@ -1,17 +1,51 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { createServer,Model } from 'miragejs';
+import { App } from './App';
 
+createServer({
+    models:{
+        transferencias:Model,
+    },
+    seeds(server){
+        server.db.loadData({
+            transferencias:[
+                {
+                    id:1,
+                    title:'Criação de web site',
+                    tipo:'deposito',
+                    categoria:'developer',
+                    valor:700,
+                    createAt:new Date('2022-02-1 03:00:00'),
+                },
+                {
+                    id:2,
+                    title:'Criação de Loja Virtual',
+                    tipo:'withdraw',
+                    categoria:'Compra',
+                    valor:600,
+                    createAt:new Date('2022-02-20 03:00:00'),
+                }
+            ]
+        })
+    },
+    routes() {
+        this.namespace = 'api';
+
+        this.get('/tranferencias', () => {
+            return this.schema.all('transferencias')
+        });
+
+        this.post('/tranferencias', (schema, request) => {
+            const data = JSON.parse(request.requestBody)
+            return schema.create('transferencias',data)
+          })
+
+    }
+});
+ 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>, document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
