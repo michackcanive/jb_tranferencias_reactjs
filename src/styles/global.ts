@@ -1,6 +1,7 @@
 import {createGlobalStyle} from 'styled-components';
 
 export const GlobalStyle=createGlobalStyle`
+
 :root{
     --fundo_globale:#f0f2f5
 }
@@ -19,9 +20,7 @@ export const GlobalStyle=createGlobalStyle`
     --blue-lignt:#6933FF
   
 }
-
 :root{
-
     --text-body:#969CB3
 }
 :root{

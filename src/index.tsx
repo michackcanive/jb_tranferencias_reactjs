@@ -13,7 +13,7 @@ createServer({
                 {
                     id:1,
                     title:'Criação de web site',
-                    tipo:'deposito',
+                    radioType:'deposito',
                     categoria:'developer',
                     valor:700,
                     createAt:new Date('2022-02-1 03:00:00'),
@@ -21,7 +21,7 @@ createServer({
                 {
                     id:2,
                     title:'Criação de Loja Virtual',
-                    tipo:'withdraw',
+                    radioType:'withdraw',
                     categoria:'Compra',
                     valor:600,
                     createAt:new Date('2022-02-20 03:00:00'),

@@ -1,26 +1,11 @@
 
-import { useEffect, useState } from "react"
-import { api } from "../../server/api"
+import { useContext} from "react"
+import { TransationContext } from "../../TransationContext";
 import { Conteiner } from "./styles"
 
-interface tranferencia {
-    id: number,
-    title: string,
-    valor: number,
-    createAt: string,
-    tipo: string,
-    categoria: string
-}
-export function TransactionsTable() {
-    const [transferencias, setTransferencias] = useState<tranferencia[]>([]);
 
-
-    useEffect(() => {
-        api.get('tranferencias')
-            .then(response => setTransferencias(response.data.transferencias))
-    }, [])
-
-
+export function TransactionsTable() { 
+    const {transferencias}=useContext(TransationContext);
     return (
         <Conteiner>
             <table>
@@ -38,7 +23,7 @@ export function TransactionsTable() {
                         transferencias.map(transferencia => (
                             <tr key={transferencia.id}>
                                 <td className="title">{transferencia.title}</td>
-                                <td className={transferencia.tipo}>
+                                <td className={transferencia.radioType}>
                                     {new Intl.NumberFormat('pt-BR', {
                                         style: 'currency',
                                         currency: 'BRL'
@@ -50,9 +35,6 @@ export function TransactionsTable() {
                             </tr>
                         ))
                     }
-
-
-
                 </tbody>
             </table>
         </Conteiner>
