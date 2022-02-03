@@ -7,6 +7,8 @@ Para inicilizar o Projecto
 
 https://github.com/michackcanive/jb_tranferencias_reactjs/blob/master/public/jb.png
 
+![repo-settings-image](https://user-images.githubusercontent.com/18093541/63130482-99e6ad80-bf88-11e9-99a1-d3cf1660b47e.png)
+
 ### `npm start`
 
 Ela estara rudadndo no modo de DEv (Modo Criação)
