@@ -5,7 +5,7 @@
 
 Para inicilizar o Projecto
 
-[https://github.com/michackcanive/jb_tranferencias_reactjs/blob/master/public/jb.png]
+https://github.com/michackcanive/jb_tranferencias_reactjs/blob/master/public/jb.png
 
 ### `npm start`
 
