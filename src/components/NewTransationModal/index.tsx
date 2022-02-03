@@ -1,9 +1,9 @@
 
-import { FormEvent, useContext, useState } from "react";
+import { FormEvent,  useState } from "react";
 import Modal from "react-modal";
 import icome_entrada from "../../assets/icome.svg"
 import icome_saida from "../../assets/icome_out.svg"
-import { TransationContext } from "../../TransationContext";
+import {  useTranation } from "../../hooks/useTransation";
 import { Conteiner, TransationTypeConteiner, RadioType } from "./styles";
 
 interface NewTransationModalProps {
@@ -12,13 +12,13 @@ interface NewTransationModalProps {
 }
 
 export function NewTransationModal({ isOpen, OnResquesteClose }: NewTransationModalProps) {
-    const{creatTransation}=useContext(TransationContext);
+    const{creatTransation}=useTranation()
 
-    
     const [title, setTitle] = useState('');
     const [radioType, setRadioType] = useState('deposito');
     const [valor, setValor] = useState(0);
     const [categoria, setCategoria] = useState('');
+    
 
  async function hendleNewtransation(envet: FormEvent) {
         envet.preventDefault();

@@ -4,7 +4,7 @@ import { Dashboard } from "./components/Dashboard";
 import { Header } from "./components/Header";
 import { NewTransationModal } from "./components/NewTransationModal";
 import { GlobalStyle } from "./styles/global";
-import { TransationProvider } from "./TransationContext";
+import { TransationProvider } from "./hooks/useTransation";
 
 Modal.setAppElement('#root');
 
@@ -28,7 +28,6 @@ export function App() {
         isOpen={isNewtransationModalOpen}
         OnResquesteClose={handleCloseNewTransationModal}
       />
-
     </TransationProvider>
   );
 } 

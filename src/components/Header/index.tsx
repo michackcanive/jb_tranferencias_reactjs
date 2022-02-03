@@ -4,9 +4,7 @@ import { ConteinerHeader, Content } from "./styles";
 interface HeaderOnpeModal{
     onOpenTrasantionModal:()=>void;
 }
-
 export function Header({onOpenTrasantionModal}:HeaderOnpeModal) {
-
     return (
         <ConteinerHeader>
             <Content> 
